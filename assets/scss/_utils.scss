@@ -1,0 +1,45 @@
+// ********** variables **********
+
+// color
+$norm-color :  #000;
+$norm-color-light:  #2F2E41;
+$norm-color-lighter:  #F0F4F9 ;
+$active-color : #ff725e;
+// $active-color-lighter : #F0F4F9 ;
+
+
+$font-family: "Raleway", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+
+// ********** mixins **********
+
+@mixin btn-primary($color, $background, $border) {
+    all: unset;
+    padding:  5px 10px;
+    border-radius: 4px;
+    outline: none;
+    color:  $color;
+    background-color:  $background;
+    border: solid 1px $border;
+    margin:  .2rem 0 0 .8rem;
+    cursor: pointer;
+    
+    &:hover {
+        color:  $background;
+        background-color: $color;
+    }
+}
+
+@mixin input-primary($color, $background, $border) {
+    all: unset;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color:  $color;
+    background-color:  $background;
+    border: solid 1px $border ;
+
+    &:focus {
+        border-style: inset;
+        border: solid 2px $color;
+    }
+}
